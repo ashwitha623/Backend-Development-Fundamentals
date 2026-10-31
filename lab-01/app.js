@@ -9,7 +9,7 @@ app.get('/', (request, response) => {
 app.get('/about', (request, response) => {
   response.json({
     name: 'Ashwitha',
-    section: 'CSE-1E',
+    section: 'CSE-2E',
   })
 })
 
@@ -23,4 +23,8 @@ app.use((request, response) => {
   response.status(404).send('Page Not Found')
 })
 
-app.listen(3000)
+const PORT = process.env.PORT || 3000
+
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`Server running on port ${PORT}`)
+})
