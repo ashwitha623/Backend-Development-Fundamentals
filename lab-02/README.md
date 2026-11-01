@@ -78,19 +78,19 @@ The database operations were also verified using the SQLite command-line interfa
 ## Screenshots
 
 ### GET All Books
-![GET All Books](screenshots/get_books.png)
+[GET All Books](screenshots/get_books.png)
 
 ### GET Book by ID
-![GET Book by ID](screenshots/get_book_by_id.png)
+[GET Book by ID](screenshots/get_book_by_id.png)
 
 ### POST Book
-![POST Book](screenshots/post_book.png)
+[POST Book](screenshots/post_book.png)
 
 ### PUT Book
-![PUT Book](screenshots/put_book.png)
+[PUT Book](screenshots/put_book.png)
 
 ### DELETE Book
-![DELETE Book](screenshots/delete_book.png)
+[DELETE Book](screenshots/delete_book.png)
 
 ## Notes
 
@@ -101,5 +101,8 @@ The database operations were also verified using the SQLite command-line interfa
 
 ## Live Deployment
 
-Not deployed yet. Local testing was completed successfully.
+https://ashwitha-books-api.onrender.com
+
+GET All Books:
+https://ashwitha-books-api.onrender.com/books/
 
