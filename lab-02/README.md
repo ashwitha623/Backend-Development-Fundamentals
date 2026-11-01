@@ -25,9 +25,9 @@ The database stores book details such as ID, title, author, price, and number of
 
 ## Database Structure
 
-Database: `books.db`
+**Database:** `books.db`
 
-Table: `book`
+**Table:** `book`
 
 | Column | Data Type |
 |---|---|
@@ -41,23 +41,21 @@ The database contains 10 initial book records.
 
 ## Installation and Execution
 
-### 1. Install dependencies
+### 1. Install Dependencies
 
 ```bash
 npm install
 ```
 
-### 2. Start the server
+### 2. Start the Server
 
 ```bash
 npx nodemon app.js
 ```
 
-### 3. Server URL
+### 3. Local Server URL
 
-```text
-http://localhost:3000/
-```
+`http://localhost:3000`
 
 ## API Endpoints
 
@@ -78,19 +76,24 @@ The database operations were also verified using the SQLite command-line interfa
 ## Screenshots
 
 ### GET All Books
-[GET All Books](screenshots/get_books.png)
+
+![GET All Books](screenshots/get_books.png)
 
 ### GET Book by ID
-[GET Book by ID](screenshots/get_book_by_id.png)
+
+![GET Book by ID](screenshots/get_book_by_id.png)
 
 ### POST Book
-[POST Book](screenshots/post_book.png)
+
+![POST Book](screenshots/post_book.png)
 
 ### PUT Book
-[PUT Book](screenshots/put_book.png)
+
+![PUT Book](screenshots/put_book.png)
 
 ### DELETE Book
-[DELETE Book](screenshots/delete_book.png)
+
+![DELETE Book](screenshots/delete_book.png)
 
 ## Notes
 
@@ -101,8 +104,12 @@ The database operations were also verified using the SQLite command-line interfa
 
 ## Live Deployment
 
+**Platform:** Render
+
+**Public Server URL:**  
 https://ashwitha-books-api.onrender.com
 
-GET All Books:
+**GET All Books API:**  
 https://ashwitha-books-api.onrender.com/books/
 
+The application was successfully deployed and tested on Render.
