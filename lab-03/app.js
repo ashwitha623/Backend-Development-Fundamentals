@@ -21,7 +21,7 @@ const initializeDBAndServer = async () => {
 
     const PORT = process.env.PORT || 3000
 
-    app.listen(PORT, () => {
+    app.listen(PORT, '0.0.0.0', () => {
       console.log(`Server Running at http://localhost:${PORT}/`)
     })
   } catch (error) {
@@ -70,6 +70,26 @@ app.get('/books/', async (request, response) => {
     })
   }
 
+
+  if (
+  (min_price !== undefined && !Number.isFinite(Number(min_price))) ||
+  (max_price !== undefined && !Number.isFinite(Number(max_price)))
+) {
+  return response.status(400).json({
+    message: 'Invalid price value',
+  })
+}
+
+if (
+  min_price !== undefined &&
+  max_price !== undefined &&
+  Number(min_price) > Number(max_price)
+) {
+  return response.status(400).json({
+    message: 'Minimum price cannot be greater than maximum price',
+  })
+}
+
   let getBooksQuery = `
     SELECT *
     FROM book
@@ -102,7 +122,16 @@ app.get('/books/', async (request, response) => {
 app.post('/books/', async (request, response) => {
   const {title, author, price, pages} = request.body
 
-  if (!title || !author || price === undefined || isNaN(Number(price))) {
+  if (
+  typeof title !== 'string' ||
+  title.trim() === '' ||
+  typeof author !== 'string' ||
+  author.trim() === '' ||
+  price === undefined ||
+  price === null ||
+  price === '' ||
+  !Number.isFinite(Number(price))
+) {
     return response.status(400).json({
       message: 'Title, author and valid price are required',
     })
